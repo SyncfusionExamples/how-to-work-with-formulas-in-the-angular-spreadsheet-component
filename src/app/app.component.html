@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <ejs-spreadsheet #spreadsheet (created)="onCreate()" [height]="500">
+    <e-sheets>
+      <e-sheet>
+        <!-- Defining named range 
+        <e-definednames>
+          <e-definedname name="Profit" refersTo="F2:F11"></e-definedname>
+        </e-definednames> -->
+        <e-rows>
+          <e-row index="11">
+            <e-cells>
+              <e-cell index="4" value="Total Profit"></e-cell>
+              <e-cell index="5" formula="=Sum(F2:F11)"></e-cell>
+            </e-cells>
+          </e-row>
+        </e-rows>
+        <e-ranges>
+            <e-range [dataSource]="data"></e-range>
+        </e-ranges>
+        <e-columns>
+            <e-column [width]=100></e-column>
+            <e-column [width]=130></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=120></e-column>
+            <e-column [width]=120></e-column>
+        </e-columns>
+      </e-sheet>
+    </e-sheets>
+  </ejs-spreadsheet>
+</div>
